@@ -2,15 +2,15 @@
 #include "Source_File.h"
 
 int main(){
-    Vehicle car1;
-    Buss bus1;
-    Bicycle bicycle1;
 
-    car1.start();
-    bus1.openDorrs();
-    bus1.start();
-    bicycle1.cycle();
-    bicycle1.stop();
+    Media media;
+    Song song;
+    Podcast podcast;
+    Audiobook audiobook;
+
+    song.printOutSummary(song.type);
+    podcast.printOutSummary(podcast.type);
+    audiobook.printOutSummary(podcast.type);
 
     return 0 ;
 }

@@ -8,9 +8,8 @@ class Vehicle {
     public:
         string brand;
         double maxSpeed;
-
-void start();
-void stop();
+        void start();
+        void stop();
 };
 
 // Derived class
@@ -19,10 +18,37 @@ class Buss : public Vehicle {
     public:
     void openDorrs();
 };
+
 // Derived class
 // Public enheritance - members stay public
 class Bicycle : public Vehicle {
     public: 
     void cycle();
+};
+
+class Media {
+    public:
+    string title;
+    double duration;
+
+    void printOutSummary(string a);
+};
+
+class Song : public Media {
+    public:
+    string type = "Song";
+    string artist;
+};
+
+class Podcast : public Media {
+    public:
+    string type = "Podcast";
+    string Guest;
+};
+
+class Audiobook : public Media {
+    public:
+    string type = "Audiobook";
+    string personReading;
 
 };
