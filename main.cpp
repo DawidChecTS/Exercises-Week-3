@@ -10,7 +10,7 @@ int main(){
 
     song.printOutSummary(song.type);
     podcast.printOutSummary(podcast.type);
-    audiobook.printOutSummary(podcast.type);
+    audiobook.printOutSummary(audiobook.type);
 
     return 0 ;
 }
