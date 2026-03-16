@@ -3,14 +3,13 @@
 
 int main(){
 
-    Media media;
-    Song song;
-    Podcast podcast;
-    Audiobook audiobook;
+    Warrior war;
 
-    song.printOutSummary(song.type);
-    podcast.printOutSummary(podcast.type);
-    audiobook.printOutSummary(audiobook.type);
+    war.name = "Conan";
+    war.health = 100.0;
+    war.swordHit = 10.0;
+    war.slashTheTarget();
+
 
     return 0 ;
 }
