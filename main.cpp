@@ -3,13 +3,8 @@
 
 int main(){
 
-    Warrior war;
-
-    war.name = "Conan";
-    war.health = 100.0;
-    war.swordHit = 10.0;
-    war.slashTheTarget();
-
+    Character* warior = new Warior("Conanek", 100.0, 10.0);
+    warior->attack();
 
     return 0 ;
 }

@@ -59,25 +59,33 @@ class Character{
     public:
     std::string name;
     double health;
+    virtual void attack() = 0; // pure virtual
+    // It means that derived class MUST implement attack()
     
 };
 
-class Warrior : public Character{
+class Warior : public Character{
     public:
     double swordHit;
-    void slashTheTarget();
+    // Adding a constructor
+    Warior(std::string n, double h, double s);
+    void attack() override;
 };
 
 class Mage : public Character{
     public:
     double wandHit;
-    void wandAttackTheTarget();
+
+    Mage(std::string n, double h, double s);
+    void attack() override;
 };
 
 class Archer : public Character{
     public:
     double arrowHit;
-    void arrowSendToTarget();
+
+    Archer(std::string n, double h, double s);
+    void attack() override;
 };
 
 #endif

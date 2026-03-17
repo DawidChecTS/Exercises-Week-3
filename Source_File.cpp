@@ -29,23 +29,45 @@ void Audiobook::printOutSummary(){
     << duration << endl;
 }
 
-void Warrior::slashTheTarget(){
-    cout << "The Warior " 
-    << name << " attacks with "
-    << swordHit << " "
-    << "damage!" << endl;
+// Adding a constructor
+Warior::Warior(std::string n, double h, double s){
+    name = n;
+    health = h;
+    swordHit = s;
+
 }
 
-void Mage::wandAttackTheTarget(){
+Mage::Mage(std::string n, double h, double w){
+    name = n;
+    health = h;
+    wandHit = w;
+}
+
+Archer::Archer(std::string n, double h, double a){
+    name = n;
+    health = h;
+    arrowHit = a;
+}
+
+void Warior:: attack(){
+    cout << "The Warior "  
+    << name << " has " << health << 
+    " health and attacks with "
+    << swordHit << " damage!" << endl;
+}
+
+void Mage:: attack(){
     cout << "The Mage "
-    << name << " attacks with "
+    << name << " has " << health << 
+    " health and attacks with "
     << wandHit << " "
     << "damage!" << endl;
 }
 
-void Archer::arrowSendToTarget(){
+void Archer:: attack(){
     cout << "The Archer "
-    << name << " attacks with "
+    << name << " has " << health << 
+    " health and attacks with "
     << arrowHit << " "
     << "damage!" << endl;
 }
