@@ -71,3 +71,27 @@ void Archer:: attack(){
     << arrowHit << " "
     << "damage!" << endl;
 }
+
+void Dummy::setHealth(int h){
+    health = h;
+}
+
+void Dummy::setDemage(int d){
+    demage = d;
+}
+
+void Dummy::setName(std::string n){
+    name = n;
+}
+
+int Dummy::getHealth(){
+    return health;
+}
+
+int Dummy::getDemage(){
+    return demage;
+}
+
+string Dummy::getName(){
+    return name;
+}

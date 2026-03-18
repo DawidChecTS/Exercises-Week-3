@@ -88,4 +88,22 @@ class Archer : public Character{
     void attack() override;
 };
 
+class Dummy {
+    private :
+    int health;
+    int demage;
+    std::string name;
+
+    public:
+    void setHealth(int h);
+    void setDemage(int d);
+    void setName(std::string n);
+
+    int getHealth();
+    int getDemage();
+    std::string getName();
+
+
+};
+
 #endif
