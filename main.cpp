@@ -8,14 +8,21 @@ int main(){
     warior->attack();
     */
 
+    /*
     Dummy dummy;
     dummy.setName("Dummycius");
     dummy.setHealth(100);
     dummy.setDemage(10);
 
     std::cout << dummy.getName() << " has "
-              << dummy.getHealth() << " health and "
-              << dummy.getDemage() << " demage!";
+    << dummy.getHealth() << " health and "
+    << dummy.getDemage() << " demage!";
+    */
 
+    Dummy dummy("Weakling", 100, 12);
+    std::cout << dummy.getName() << " has "
+    << dummy.getHealth() << " health and "
+    << dummy.getDemage() << " demage!";
+    
     return 0 ;
 }

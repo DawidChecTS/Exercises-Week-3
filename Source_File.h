@@ -90,11 +90,13 @@ class Archer : public Character{
 
 class Dummy {
     private :
+    std::string name;
     int health;
     int demage;
-    std::string name;
 
     public:
+    Dummy(std::string n, int h, int d);
+
     void setHealth(int h);
     void setDemage(int d);
     void setName(std::string n);

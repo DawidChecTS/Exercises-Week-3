@@ -72,12 +72,34 @@ void Archer:: attack(){
     << "damage!" << endl;
 }
 
-void Dummy::setHealth(int h){
+Dummy::Dummy(std::string n, int h, int d){
+    name = n;
     health = h;
+    demage = d;
+}
+
+void Dummy::setHealth(int h){
+    if (h < 0){
+        health = 0;
+    }
+    else if(h <= 100){
+        health = h;
+    }
+    else {
+        health = 100;
+    }
 }
 
 void Dummy::setDemage(int d){
-    demage = d;
+    if (d < 0){
+        demage = 0;
+    }
+    else if(d <= 10){
+        demage = d;
+    }
+    else {
+        demage = 10;
+    }
 }
 
 void Dummy::setName(std::string n){
