@@ -117,3 +117,26 @@ int Dummy::getDemage(){
 string Dummy::getName(){
     return name;
 }
+
+Person::Person(std::string b, std::string f,
+    std::string l, std::string s, std::string p, 
+    std::string c){
+
+    BirthDate = b;
+    FirstName = f;
+    LastName = l;
+    StreetAddress = s;
+    PostalCode = p;
+    City = c;
+}
+
+string Person::giveName(){
+    return FirstName;
+}
+
+void Person::ChangeAddress(std::string s, std::string p, std::string c){
+    
+    StreetAddress = s;
+    PostalCode = p;
+    City = c;
+}

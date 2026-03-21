@@ -108,4 +108,23 @@ class Dummy {
 
 };
 
+class Person {
+    private :
+    std::string BirthDate;
+    std::string FirstName;
+    std::string LastName;
+    std::string StreetAddress;
+    std::string PostalCode;
+    std::string City;
+
+    public :
+    Person(std::string b, std::string f,
+    std::string l, std::string s, std::string p, 
+    std::string c);
+
+    std::string giveName();
+    void ChangeAddress(std::string s, std::string p, std::string c);
+};
+
+
 #endif
