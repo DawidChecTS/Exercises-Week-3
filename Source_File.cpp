@@ -140,3 +140,13 @@ void Person::ChangeAddress(std::string s, std::string p, std::string c){
     PostalCode = p;
     City = c;
 }
+
+string Person::giveAddress(){
+    return StreetAddress + " " + PostalCode + " " + City;
+}
+
+void Person::MoveInto(const Person& a){
+    StreetAddress = a.StreetAddress;
+    PostalCode = a.PostalCode;
+    City = a.City;
+}

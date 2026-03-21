@@ -124,6 +124,8 @@ class Person {
 
     std::string giveName();
     void ChangeAddress(std::string s, std::string p, std::string c);
+    std::string giveAddress();
+    void MoveInto(const Person& a);
 };
 
 

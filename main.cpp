@@ -27,18 +27,22 @@ int main(){
     */
 
     Person dawid ("1996-04-15", "Dawid",
-        "Chec", "Oluff Nillsonsväg 14",
+        "Chec", "Oluff Nillsonsvag 14",
         "433-36", "Partille");
 
     Person kateryna ("1998-12-02", "Kateryna",
-    "Tonkopii", "Järnvägsgatan 83",
+    "Tonkopii", "Jarnvagsgatan 83",
     "333-32", "Gnosjö");
     
     std::cout << dawid.giveName() << std::endl;
     std::cout << kateryna.giveName() << std::endl;
 
-    kateryna.ChangeAddress("Oluff Nillsonsväg 14", "433-36","Partille");
-    
+    /*
+    kateryna.ChangeAddress("Oluff Nillsonsvag 14", "433-36","Partille");
+    std::cout << kateryna.giveAddress();
+    */
+    kateryna.MoveInto(dawid);
+    std::cout << kateryna.giveAddress();
 
     return 0 ;
 }
