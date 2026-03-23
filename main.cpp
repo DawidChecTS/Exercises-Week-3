@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Source_File.h"
 
+
 int main(){
 
     /*
@@ -45,27 +46,40 @@ int main(){
     std::cout << kateryna.giveAddress();
     */
 
-    int x = 10;
-    x = 20;
+    // a pointer is variable that stores adress
+    // of some other variable
+    // & address-of operator
+    // * dereference operator
 
-    //std::cout << x << std::endl;
-    // where the x "lives" (200x9924fffb5c)
-    // give me the adress of x
-    //std::cout << &x << std::endl;
+    // Small session about the pointers
 
-    // a pointer is a variable that stores the address
+    std::string name = "Dawid";
+    int age = 29;
 
-    //int* p;
-    //std::cout << p << std::endl;
+    std::string *pName = &name;
+    int *pAge = &age;
+    
+    std::string freePizzas[5] = {"Pizza1","Pizza2","Pizza3","Pizza4","Pizza5"};
+    std::string *pfreePizzas = freePizzas; // in case of arrays no need of adress of operator
 
-    // connecting pointer to variable
-    int y = 6;
-    int* p = &y;
-    *p = 7;
+    std::cout << pName << '\n'; // stores the adress
+    std::cout << *pName << '\n'; // accessing the value stored in the memory
+    std::cout << pAge << '\n';
+    std::cout << *pAge << '\n';
+    std::cout << *freePizzas << '\n';
+    std::cout << *(freePizzas+1) << '\n';
+    std::cout << *(freePizzas+2) << '\n';
+    std::cout << *(freePizzas+3) << '\n';
+    std::cout << *(freePizzas+4) << '\n';
 
-    std::cout << p;
+    // Small session about the references
 
+    std::string x = "Kool-Aid";
+    std::string y = "Water";
 
+    swap(x, y);
+    std::cout << "X: " << x << '\n';
+    std::cout << "Y: " << y << '\n';
 
     return 0 ;
 }

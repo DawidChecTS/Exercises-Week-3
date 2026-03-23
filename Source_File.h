@@ -128,5 +128,7 @@ class Person {
     void MoveInto(const Person& a);
 };
 
+void test(int x);
 
+void swap(std::string &x, std::string &y);
 #endif

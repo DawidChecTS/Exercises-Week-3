@@ -150,3 +150,13 @@ void Person::MoveInto(const Person& a){
     PostalCode = a.PostalCode;
     City = a.City;
 }
+
+void test (int x){
+    x = 100;
+}
+
+void swap(std::string &x, std::string &y){
+    std::string temp = x;
+    x = y;
+    y = temp;
+}
