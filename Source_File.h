@@ -132,3 +132,36 @@ void test(int x);
 
 void swap(std::string &x, std::string &y);
 #endif
+
+class Champion{
+    private :
+    std::string name;
+    int healthPoints;
+
+    public :
+
+    Champion(std::string n, int h);
+
+    void Attack();
+    void Defend();
+};
+
+class Enemy{
+    private :
+    std::string name;
+    int healthPoints;
+
+    public :
+
+    Enemy(std::string n, int h);
+
+    void Attack();
+    void Defend();
+};
+
+class Graphics{
+    public :
+    void WelcomeScreen();
+    void Menu();
+    void BattleScreen(std::string pn, int ph, std::string en, int eh);
+};

@@ -160,3 +160,46 @@ void swap(std::string &x, std::string &y){
     x = y;
     y = temp;
 }
+
+Champion::Champion(std::string n, int h){
+    n = name;
+    h = healthPoints;
+}
+
+Enemy::Enemy(std::string n, int h){
+    n = name;
+    h = healthPoints;
+}
+
+void Graphics::WelcomeScreen(){
+    std::string welcome = "Welcome in the HERO of CIPLUS Game!";
+    std::string enterName = "Enter your name Champion!: ";
+    
+    std::cout << welcome << '\n';
+    std::cout << enterName;
+}
+
+void Graphics::Menu(){
+    std::string gameName = "Hero of Ciplus";
+    std::string space = "------------------------";
+    std::string battleNextEnemy = "1. Battle the next enemy";
+    std::string exitGame = "2. Exit game";
+    std:string enterOption = "Enter option:";
+
+    std::cout << gameName << '\n';
+    std::cout << space << '\n';
+    std::cout << battleNextEnemy << '\n';
+    std::cout << exitGame << '\n';
+    std::cout << enterOption << '\n';
+}
+
+void Graphics::BattleScreen(std::string pn, int ph, std::string en, int eh){
+    cout << "<"<< pn << ">" << "                      "
+     <<"<"<< en << ">" << '\n';
+    cout << "HP: " << "<"<< ph << ">" << "                      "
+    << "HP: " << "<" << ph << ">" << '\n';
+    
+
+
+
+}

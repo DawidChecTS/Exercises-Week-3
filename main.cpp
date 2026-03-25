@@ -53,6 +53,7 @@ int main(){
 
     // Small session about the pointers
 
+    /*
     std::string name = "Dawid";
     int age = 29;
 
@@ -80,6 +81,19 @@ int main(){
     swap(x, y);
     std::cout << "X: " << x << '\n';
     std::cout << "Y: " << y << '\n';
+    */
+
+    Graphics gameGraphics;
+    gameGraphics.WelcomeScreen();
+    gameGraphics.Menu();
+
+    std::string playerName;
+    std::cin >> playerName;
+
+    Champion player(playerName, 100); 
+    Enemy enemy("Huge Ork", 100);
+
+    gameGraphics.BattleScreen(playerName, 100, "Huge Ork", 100);
 
     return 0 ;
 }
