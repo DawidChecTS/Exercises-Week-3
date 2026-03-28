@@ -176,7 +176,7 @@ void Graphics::WelcomeScreen(){
     std::string enterName = "Enter your name Champion!: ";
     
     std::cout << welcome << '\n';
-    std::cout << enterName;
+    std::cout << enterName << '\n';
 }
 
 void Graphics::Menu(){
@@ -186,6 +186,7 @@ void Graphics::Menu(){
     std::string exitGame = "2. Exit game";
     std:string enterOption = "Enter option:";
 
+    std::cout << '\n';
     std::cout << gameName << '\n';
     std::cout << space << '\n';
     std::cout << battleNextEnemy << '\n';
@@ -194,12 +195,31 @@ void Graphics::Menu(){
 }
 
 void Graphics::BattleScreen(std::string pn, int ph, std::string en, int eh){
-    cout << "<"<< pn << ">" << "                      "
+    cout << '\n' << "<"<< pn << ">" << "                      "
      <<"<"<< en << ">" << '\n';
     cout << "HP: " << "<"<< ph << ">" << "                      "
     << "HP: " << "<" << ph << ">" << '\n';
-    
+    std::string space = "------------------------";
+    std::string attack = "1. Attack";
+    std::string admitDefeat = "2. Admit Defeat";
+    std:string enterOption = "Enter option:";
 
+    std::cout << space << '\n';
+    std::cout << attack << '\n';
+    std::cout << admitDefeat << '\n';
+    std::cout << enterOption << '\n';
+}
 
+void Graphics::ExitPrompt(){
+    std::cout << "You have chosen to exit the game." << '\n';
+    std::cout << "Bye Bye and see you again!" << '\n';
+}
 
+int GamerChoice::checkIfInteger(int a){
+    if (a > 0 && a < 3){
+        return a;
+    }
+    else{
+        return false;
+    }
 }

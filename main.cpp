@@ -84,16 +84,32 @@ int main(){
     */
 
     Graphics gameGraphics;
+    GamerChoice gamerChoice;
     gameGraphics.WelcomeScreen();
-    gameGraphics.Menu();
 
     std::string playerName;
     std::cin >> playerName;
+    int playerHealthPoints = 100;
+    int enemyHealthPoints = 100;
 
-    Champion player(playerName, 100); 
-    Enemy enemy("Huge Ork", 100);
+    gameGraphics.Menu();
 
-    gameGraphics.BattleScreen(playerName, 100, "Huge Ork", 100);
+    int playerChoice;
+    std::cin >> playerChoice;
 
+    gamerChoice.checkIfInteger(playerChoice);
+
+    while (true) {
+        if (playerChoice == 1){
+        Champion player(playerName, playerHealthPoints); 
+        Enemy enemy("Huge Ork", enemyHealthPoints);
+        gameGraphics.BattleScreen(playerName, 100, "Huge Ork", 100);
+        }
+        else if (playerChoice == 2){
+        gameGraphics.ExitPrompt();
+        break;
+        }
+    }
+    
     return 0 ;
 }

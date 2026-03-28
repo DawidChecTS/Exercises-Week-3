@@ -164,4 +164,13 @@ class Graphics{
     void WelcomeScreen();
     void Menu();
     void BattleScreen(std::string pn, int ph, std::string en, int eh);
+    void ExitPrompt();
+};
+
+class GamerChoice{
+    private :
+    int optionChosen;
+
+    public : 
+    int checkIfInteger(int a);
 };
