@@ -114,6 +114,7 @@ int main(){
 
         if (playerChoice == 1){
             combat.Attack(enemyHealthPoints, dmg);
+            combat.CounterAttack(playerHealthPoints, dmg);
             gameGraphics.BattleScreen(playerName, playerHealthPoints, enemyName, enemyHealthPoints);
             break;
         }

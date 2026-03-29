@@ -179,6 +179,6 @@ class Combat{
     public :
     int dmg;
     
-    int Attack(int a, int b);
-    int CounterAttack(int a, int b);
+    void Attack(int &a, int b);
+    void CounterAttack(int &a, int b);
 };

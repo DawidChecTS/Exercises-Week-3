@@ -198,7 +198,7 @@ void Graphics::BattleScreen(std::string pn, int ph, std::string en, int eh){
     cout << '\n' << "<"<< pn << ">" << "                      "
      <<"<"<< en << ">" << '\n';
     cout << "HP: " << "<"<< ph << ">" << "                      "
-    << "HP: " << "<" << ph << ">" << '\n';
+    << "HP: " << "<" << eh << ">" << '\n';
     std::string space = "------------------------";
     std::string attack = "1. Attack";
     std::string admitDefeat = "2. Admit Defeat";
@@ -224,11 +224,12 @@ int GamerChoice::checkIfInteger(int a){
     }
 }
 
-int Combat::Attack(int a, int b){
-    return a - b;
-    std::cout << "You have attacked the enemy with 10 dmg points!";
+void Combat::Attack(int &a, int b){
+    std::cout << "You have attacked the enemy with 10 dmg points!" << '\n';
+    a = a - b;
 }
 
-int Combat::CounterAttack(int a, int b){
-    return a - b;
+void Combat::CounterAttack(int &a, int b){
+    std::cout << "You have Counter Attacked by the enemy with 10 dmg points!" << '\n';
+    a = a - b;
 }
