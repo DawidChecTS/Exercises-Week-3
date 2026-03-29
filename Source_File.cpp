@@ -223,3 +223,12 @@ int GamerChoice::checkIfInteger(int a){
         return false;
     }
 }
+
+int Combat::Attack(int a, int b){
+    return a - b;
+    std::cout << "You have attacked the enemy with 10 dmg points!";
+}
+
+int Combat::CounterAttack(int a, int b){
+    return a - b;
+}

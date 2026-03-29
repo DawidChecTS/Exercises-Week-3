@@ -174,3 +174,11 @@ class GamerChoice{
     public : 
     int checkIfInteger(int a);
 };
+
+class Combat{
+    public :
+    int dmg;
+    
+    int Attack(int a, int b);
+    int CounterAttack(int a, int b);
+};

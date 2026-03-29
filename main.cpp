@@ -85,12 +85,17 @@ int main(){
 
     Graphics gameGraphics;
     GamerChoice gamerChoice;
+    Combat combat;
     gameGraphics.WelcomeScreen();
+
+    std::string enemyName = "Huge Ork";
+    int playerHealthPoints = 100;
+    int enemyHealthPoints = 100;
+    int dmg = 10;
 
     std::string playerName;
     std::cin >> playerName;
-    int playerHealthPoints = 100;
-    int enemyHealthPoints = 100;
+
 
     gameGraphics.Menu();
 
@@ -99,13 +104,24 @@ int main(){
 
     gamerChoice.checkIfInteger(playerChoice);
 
-    while (true) {
-        if (playerChoice == 1){
+    switch (playerChoice) {
+        case 1: {
         Champion player(playerName, playerHealthPoints); 
-        Enemy enemy("Huge Ork", enemyHealthPoints);
-        gameGraphics.BattleScreen(playerName, 100, "Huge Ork", 100);
+        Enemy enemy(enemyName, enemyHealthPoints);
+        gameGraphics.BattleScreen(playerName, playerHealthPoints, enemyName, enemyHealthPoints);
+        std::cin >> playerChoice;
+        gamerChoice.checkIfInteger(playerChoice);
+
+        if (playerChoice == 1){
+            combat.Attack(enemyHealthPoints, dmg);
+            gameGraphics.BattleScreen(playerName, playerHealthPoints, enemyName, enemyHealthPoints);
+            break;
         }
-        else if (playerChoice == 2){
+        else{
+            [[fallthrough]];
+        }
+        }
+        case 2: {
         gameGraphics.ExitPrompt();
         break;
         }
